@@ -18,6 +18,9 @@ button{
     border: none;
     outline: 0;
 }
+input{
+    outline: 0;
+}
 nav{
     height: 50px;
     width: 100%;
@@ -137,19 +140,22 @@ nav ul li a:hover, a.active{
 #checkOut{
     position: fixed;
     background-color: #ddddddf6;
-    top: 10rem;
-    left: 30%;
-    padding:3rem 3rem 1rem 3rem ;
+    width: 50%;
+    top: 20%;
+    left: 25%;
     display: none;
+    padding: 1rem 0;
 }
 #checkOutTable{
-    width: 550px;
+    width: 85%;
+    margin:2rem auto;
     text-align: center;
     position: relative;
-    color: #3352F2;
+    color: #222222;
+
 }
-#checkOutTable, td{
-    border: 1px solid #3352F2;
+#checkOutTable, td, th{
+    border: 1px solid #222222;
     border-collapse: collapse;
     padding: 10px;
 }
@@ -160,6 +166,8 @@ nav ul li a:hover, a.active{
     font-size: 2rem;
     padding: 0px 10px 3px 10px;
     border: none;
+    background-color: #ffffff;
+    color: #222222;
 }
 #confirmBtn{
     margin: 10px auto;
@@ -168,14 +176,20 @@ nav ul li a:hover, a.active{
     text-transform: uppercase;
     font-weight: 600;
     border: none;
-    color: #3352F2;
+    background-color: #3352F2;
+    color: #ffffff;
 }
 #closeBtn:hover{
     background-color: red;
     color: #ffffff;
 }
 #confirmBtn:hover{
-    background-color: #3352F2;
-    color: #ffffff;
+    background-color: #2941b6;
     transition: .5s;
+}
+tfoot td, #totalFirstClass, #totalEconomy{
+    text-align: right;
+}
+tfoot th{
+    text-align:left;
 }

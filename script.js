@@ -21,13 +21,13 @@ function getSubTotal() {
     let firstClassCount = parseInt(document.getElementById('firstClassCount').value);
     let economyCount = parseInt(document.getElementById('economyCount').value);
     let subTotal = currentSubTotal.innerText = (singleFirstClass * firstClassCount) + (singleEconomy * economyCount);
-    // Ticket unit and price return checkout table start
-    document.getElementById('firstClassUnit').innerText = firstClassCount;
-    document.getElementById('economyUnit').innerText = economyCount;
+    // Ticket quantity and price return to checkout table start
+    document.getElementById('firstClassQuantity').innerText = firstClassCount;
+    document.getElementById('economyQuantity').innerText = economyCount;
     document.getElementById('totalFirstClass').innerText = singleFirstClass * firstClassCount;
     document.getElementById('totalEconomy').innerText = singleEconomy * economyCount;
     document.getElementById('beforeVatTotal').innerText = subTotal;
-    // Ticket unit and price return checkout table end
+    // Ticket quantity and price return to checkout table end
     return subTotal;
 }
 
@@ -52,9 +52,12 @@ function getTotal() {
 }
 
 
-document.getElementById('bookNowBtn').addEventListener('click', function() {
-    document.getElementById('checkOut').style.display = 'block';
-});
-document.getElementById('closeBtn').addEventListener('click', function() {
-    document.getElementById('checkOut').style.display = 'none';
-});
+// buy now and close button handler function
+function buttonHandler(buttonId) {
+    if(buttonId == 'bookNowBtn'){
+        document.getElementById('checkOut').style.display = 'block';
+    }
+    if(buttonId == 'closeBtn'){
+        document.getElementById('checkOut').style.display = 'none';
+    }
+};

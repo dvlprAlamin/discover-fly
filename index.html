@@ -50,7 +50,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($<span id="singleFirstClass">150</span>)</label>
-                    <input id="firstClassCount" class="inp-style inp-width" type="number" value="0" name="">
+                    <input id="firstClassCount" readonly class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="ticketCount(false, 'firstClass')">-</button>
@@ -61,7 +61,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($<span id="singleEconomy">100</span>)</label>
-                    <input id="economyCount" class="inp-style inp-width" type="number" value="0" name="">
+                    <input id="economyCount" readonly class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="ticketCount(false, 'economy')">-</button>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style" id="bookNowBtn">Book Now</button>
+            <button onclick="buttonHandler('bookNowBtn')" class="btn-style" id="bookNowBtn">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -107,11 +107,11 @@
             <table id="checkOutTable">
                 <thead>
                     <tr>
-                        <td>Serial No.</td>
-                        <td>Ticket type</td>
-                        <td>Ticket price($)</td>
-                        <td>Unit</td>
-                        <td>Total($)</td>
+                        <th>Serial No.</th>
+                        <th>Ticket type</th>
+                        <th>Ticket price($)</th>
+                        <th>Quantity</th>
+                        <th>Total($)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,35 +119,35 @@
                         <td>1</td>
                         <td>First class</td>
                         <td>150</td>
-                        <td id="firstClassUnit">0</td>
+                        <td id="firstClassQuantity">0</td>
                         <td id="totalFirstClass">0</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Economy</td>
                         <td>100</td>
-                        <td id="economyUnit">0</td>
+                        <td id="economyQuantity">0</td>
                         <td id="totalEconomy">0</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4">
+                        <th colspan="4">
                             <div>Total price before VAT($)</div>
                             <div>(+) VAT @ 10%</div> 
-                        </td>
+                        </th>
                         <td>
                             <div id="beforeVatTotal">0</div>
                             <div id="checkOutVat">0</div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4">Total price($)</td>
+                        <th colspan="4">Total price($)</th>
                         <td id="checkOutTotal">0</td>
                     </tr>
                 </tfoot>
             </table>
-            <button id="closeBtn" >x</button>
+            <button onclick="buttonHandler('closeBtn')" id="closeBtn" >x</button>
             <button id="confirmBtn">Confirm</button>
         </section>
     </main>
