@@ -21,6 +21,13 @@ function getSubTotal() {
     let firstClassCount = parseInt(document.getElementById('firstClassCount').value);
     let economyCount = parseInt(document.getElementById('economyCount').value);
     let subTotal = currentSubTotal.innerText = (singleFirstClass * firstClassCount) + (singleEconomy * economyCount);
+    // Ticket unit and price return checkout table start
+    document.getElementById('firstClassUnit').innerText = firstClassCount;
+    document.getElementById('economyUnit').innerText = economyCount;
+    document.getElementById('totalFirstClass').innerText = singleFirstClass * firstClassCount;
+    document.getElementById('totalEconomy').innerText = singleEconomy * economyCount;
+    document.getElementById('beforeVatTotal').innerText = subTotal;
+    // Ticket unit and price return checkout table end
     return subTotal;
 }
 
@@ -29,6 +36,8 @@ function getSubTotal() {
 function getVat() {
     let currentVat = document.getElementById('vat');
     let totalVat = currentVat.innerText = Math.round(getSubTotal() * .1);
+    // checkout table vat
+    document.getElementById('checkOutVat').innerText = totalVat;
     return totalVat;
 }
 
@@ -37,6 +46,8 @@ function getVat() {
 function getTotal() {
     let total = document.getElementById('total');
     let totalPrice = total.innerText = getSubTotal() + getVat();
+    // checkout table total price
+    document.getElementById('checkOutTotal').innerText = totalPrice;
     return totalPrice;
 }
 
