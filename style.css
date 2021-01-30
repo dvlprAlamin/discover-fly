@@ -169,27 +169,17 @@ nav ul li a:hover, a.active{
     background-color: #ffffff;
     color: #222222;
 }
-#confirmBtn{
-    margin: 10px auto;
-    display: block;
-    padding: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    background-color: #3352F2;
-    color: #ffffff;
-}
 #closeBtn:hover{
     background-color: red;
     color: #ffffff;
-}
-#confirmBtn:hover{
-    background-color: #2941b6;
-    transition: .5s;
 }
 tfoot td, #totalFirstClass, #totalEconomy{
     text-align: right;
 }
 tfoot th{
     text-align:left;
+}
+.orderPlaced{
+    text-align: center;
+    color: green;
 }
