@@ -96,13 +96,60 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style" id="bookNowBtn">Book Now</button>
         </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
+        <section id="checkOut">
+            <table id="checkOutTable">
+                <thead>
+                    <tr>
+                        <td>Serial No.</td>
+                        <td>Ticket type</td>
+                        <td>Ticket price($)</td>
+                        <td>Unit</td>
+                        <td>Total($)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>First class</td>
+                        <td>150</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Economy</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <div>Total price before VAT($)</div>
+                            <div>(+) VAT @ 10%</div> 
+                        </td>
+                        <td>
+                            <div class="subtotal">0</div>
+                            <div class="vat">0</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Total price($)</td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="closeBtn" >x</button>
+            <button id="confirmBtn">Confirm</button>
+        </section>
     </main>
     <script src="script.js"></script>
     <!--Thank You-->

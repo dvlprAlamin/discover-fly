@@ -13,7 +13,11 @@ body{
     background-attachment: scroll;
     background-size: cover;
 }
-
+button{
+    cursor: pointer;
+    border: none;
+    outline: 0;
+}
 nav{
     height: 50px;
     width: 100%;
@@ -75,9 +79,6 @@ nav ul li a:hover, a.active{
 .plus-minus-btn button{
     padding: 10px;
     font-size: 25px;
-    cursor: pointer;
-    border: none;
-    outline: 0;
     border-radius: 5px;
 }
 .plus-minus-btn button:hover{
@@ -132,4 +133,52 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#checkOut{
+    position: fixed;
+    background-color: #ddddddf6;
+    top: 10rem;
+    left: 30%;
+    padding:3rem 3rem 1rem 3rem ;
+    display: none;
+}
+#checkOutTable{
+    width: 550px;
+    text-align: center;
+    position: relative;
+    color: #3352F2;
+}
+#checkOutTable, td{
+    border: 1px solid #3352F2;
+    border-collapse: collapse;
+    padding: 10px;
+}
+#closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 0px 10px 3px 10px;
+    border: none;
+}
+#confirmBtn{
+    margin: 10px auto;
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    color: #3352F2;
+}
+#closeBtn:hover{
+    background-color: red;
+    color: #ffffff;
+}
+#confirmBtn:hover{
+    background-color: #3352F2;
+    color: #ffffff;
+    transition: .5s;
+}
+tfoot{
+    text-align: left;
 }

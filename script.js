@@ -39,3 +39,11 @@ function getTotal() {
     let totalPrice = total.innerText = getSubTotal() + getVat();
     return totalPrice;
 }
+
+
+document.getElementById('bookNowBtn').addEventListener('click', function() {
+    document.getElementById('checkOut').style.display = 'block';
+});
+document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('checkOut').style.display = 'none';
+});
